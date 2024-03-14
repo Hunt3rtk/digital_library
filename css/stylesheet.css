@@ -1,0 +1,530 @@
+:root {
+/* CSS HEX */
+    --cambridge-blue: #85988Bff;
+    --ebony: #575647ff;
+    --gunmetal: #22342Eff;
+    --chestnut: #A25037ff;
+    --golden-brown: #916C38ff;
+    --timberwolf: #D7D6CBff;
+    --van-dyke: #392C28ff;
+    --shadow: #00000066;
+    --error-red: #E6543Bff;
+    --go-green: #3be69fff;
+
+    /* CSS HSL */
+    /* --cambridge-blue: hsla(139, 8%, 56%, 1);
+    --ebony: hsla(56, 10%, 31%, 1);
+    --gunmetal: hsla(160, 21%, 17%, 1);
+    --chestnut: hsla(14, 49%, 43%, 1);
+    --golden-brown: hsla(35, 44%, 39%, 1);
+    --timberwolf: hsla(55, 13%, 82%, 1);
+    --van-dyke: hsla(14, 18%, 19%, 1); */
+    }
+
+html {
+    background-color: var(--gunmetal);
+    background-image: url(../public/img/project_background_transparent.png);
+    background-repeat: repeat;
+    background-size: 100%;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 1.5;
+}
+
+body {
+    margin: 0;
+    color: var(--timberwolf);
+}
+
+h1, h2, h3, h4, a {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+
+button {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+p {
+    font-family: "Source Code Pro", monospace;
+    letter-spacing: 1px;
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    width: 10%;
+}
+
+nav ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 50%;
+    box-shadow: 5px 10px var(--shadow);
+    background-color: var(--timberwolf);
+    color: var(--golden-brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav li:hover {
+    height: 55px;
+    width: 55px;
+    box-shadow: 7px 13px 5px 5px var(--shadow);
+}
+
+nav li img {
+    width: 50px;
+    height: 50px;
+}
+
+nav .selected {
+    height: 100px;
+    width: 100px;
+}
+
+nav .selected:hover {
+    height: 100px;
+    width: 100px;
+    box-shadow: 5px 10px var(--shadow);
+}
+
+header {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    background-color: var(--cambridge-blue);
+    border: 5px solid var(--ebony);
+}
+
+header h3 { 
+    font-family: "Source Code Pro", monospace;
+    letter-spacing: 1.5px;
+}
+
+header .profile_pic_container {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    background-color: var(--golden-brown);
+    box-shadow: 10px 10px var(--shadow);
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .profile_pic_frame {
+    width: 225px;
+    height: 225px;
+    border-radius: 30px;
+    background-color: var(--timberwolf);
+    box-shadow: 10px 10px var(--shadow);
+}
+
+header .profile_info_col1 {
+    grid-column: 2 / 3;
+    background-color: var(--golden-brown);
+    border-radius: 10px;
+}
+
+header .profile_info_col1 h1 {
+    padding-left: 10px;
+}
+
+header .profile_info_col1 p {
+    padding-left: 10px;
+}
+
+header .profile_info_col2 {
+    grid-column: 3 / 4;
+}
+
+header .col4 {
+    grid-column: 4 / 5;
+}
+
+header .col4 button {
+    width: 120px;
+    height: 40px;
+    color: var(--timberwolf);
+    background-color: var(--chestnut);
+    border-radius: 20px;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+    box-shadow: 5px 5px var(--shadow);
+    float: right;
+}
+
+header .col4 button:hover {
+    width: 140px;
+    height: 50px;
+    border-radius: 40px;
+    box-shadow: 7px 7px 5px 5px var(--shadow);
+}
+
+main {
+    float: right;
+    width: 80%;
+    padding: 30px;
+    margin-right: 50px;
+    background-color: var(--timberwolf);
+    border: 10px solid var(--van-dyke);
+    box-shadow: 10px 10px var(--shadow);
+}
+
+main h1 {
+    color: var(--timberwolf);
+    background-color: var(--van-dyke);
+    border-radius: 2px;
+    text-align: center;
+    padding: 3%;
+    letter-spacing: 25px;
+    font-size: 52px;
+}
+
+main hr {
+    border: 3px solid var(--van-dyke);
+}
+
+main ul {
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main ul li {
+    position: relative;
+    width: 90%;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--cambridge-blue);
+    border: 10px solid var(--ebony);
+    
+}
+
+main form {
+    padding: 50px;
+}
+
+.flexbox {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.book_graphic {
+    padding: 0;
+    width: 150px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--van-dyke);
+    text-align: center;
+    color: var(--van-dyke);
+}
+
+.book_graphic p{
+    padding: 3px;
+    color: var(--timberwolf);
+}
+
+.public_info {
+    padding-left: 15px;
+    height: 100%;
+    width: 50%;
+}
+
+.public_info p {
+    height: 65%;
+    overflow: auto;
+}
+
+.personal_info {
+
+    font-size: 56px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.more_button {
+    display: inline;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    right: 40px;
+}
+
+.delete {
+    display: inline;
+    position: absolute;
+    margin-top: 10px;
+    height: 25px;
+    width: 25px;
+    top: 0px;
+    right: 10px;
+}
+
+.add {
+    display: inline;
+    position: absolute;
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+    top: 0px;
+    right: 10px;
+}
+
+.more_button:hover {
+    height: 60px;
+    width: 60px;
+}
+
+.delete:hover {
+    height: 35px;
+    width: 35px;
+}
+
+.add:hover {
+    height: 60px;
+    width: 60px;
+}
+
+
+
+.hidden button {
+    display:inline;
+}
+
+.banner {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-image: url("../public/img/library-books-wood.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: var(--timberwolf);
+}
+
+#login {
+    font-size: 45px;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 15px;
+    border-style:groove;
+    background-color: var(--cambridge-blue);
+    text-decoration: none;
+    color: var(--timberwolf);
+    letter-spacing: 5px;
+    box-shadow: 7px 13px 3px var(--shadow);
+}
+
+#login:hover {
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    box-shadow: 10px 17px 5px var(--shadow);
+}
+
+.discovery_banner {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--van-dyke);
+    border-top: 5px solid var(--golden-brown);
+    border-bottom: 5px solid var(--golden-brown);
+    letter-spacing: 75px;
+    padding: 2%;
+    font-size: 50px;
+    font-weight: 400;
+    box-shadow: 7px 13px 3px var(--shadow);
+}
+
+#discovery_ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+#discovery_ul li {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--cambridge-blue);
+    border: 10px solid var(--timberwolf);
+    border-radius: 10px;
+    box-shadow: 7px 13px 3px var(--shadow);
+    
+}
+
+#discovery_ul li h3{
+    float: right;
+}
+
+#discovery_ul li div {
+    font-size: 10px;
+    float: left;
+    width: 100px;
+    height: 140px;
+    background-color: var(--van-dyke);
+    border-radius: 5px;
+}
+
+#discovery_ul li div p{
+    padding: 5px;
+    width: auto;
+    height: auto;
+}
+
+#discovery_ul li p {
+    width: 100%;
+    height: 155px;;
+    display: block;
+    padding: 15px;
+    clear: both;
+    overflow: auto;
+}
+
+.errors {
+    text-align: left;
+    float: left;
+    background-color: var(--timberwolf);
+    border: 3px solid var(--error-red);
+}
+
+/* CSS for medium size screens (1400px wide) */
+
+@media only screen and (max-width: 1400px) {
+
+    nav {
+        width: 20%;
+    }
+
+    header {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    header .profile_pic_container {
+        width: 200px;
+        height: 200px;
+    }
+
+    header .profile_pic_frame {
+        width: 175px;
+        height: 175px;
+    }
+
+}
+
+/* CSS for small size screens (800px wide) */
+
+@media only screen and (max-width: 800px) {
+    nav {
+        height: 20%;
+        width: 100%;
+        display: inline;
+        background-color: unset;
+        bottom: 0;
+        position: fixed;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    header .profile_pic_container {
+        width: 125px;
+        height: 125px;
+    }
+
+    header .profile_pic_frame {
+        width: 115px;
+        height: 115px;
+    }
+    
+    main {
+        width: 100%;
+        float: unset;
+        padding: 10px;
+    }
+
+    main ul li {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .public_info h3 {
+        display: none;
+    }
+
+    .public_info p {
+        height: 90%;
+    }
+
+    @media only screen and (max-width: 400px) {
+        h1 {
+            font-size: 34px;
+            letter-spacing: 5px;
+        }
+        
+        p {
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        main ul li p {
+            font-size: 56px;
+            letter-spacing: .5px;
+        }
+    }
+}
