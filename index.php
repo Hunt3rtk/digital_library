@@ -17,9 +17,9 @@ if (is_logged_in()) {
 }
 
 if ($action == 'home_page') {
-    include ('public/home_page.php');
+    include (PUBLIC_PATH . '/home_page.php');
 } else if ($action == 'login') {
-    include ('public/login.php');
+    include (PUBLIC_PATH . '/login.php');
 }
 ?>
 

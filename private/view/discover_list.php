@@ -1,15 +1,15 @@
         <main>
             <h1>DISCOVER</h1>
+            <?php include 'search.php' ?>
             <ul>
-                <?php $books = find_all_books() ?>
                 <?php foreach($books as $book):?>
-                    <?php $rating = find_avg_book_rating($book['id']); ?>
+                    <?php $rating = find_avg_book_rating($book->get_id()); ?>
                     <li>
                         <div class="flexbox">
-                            <div class="book_graphic"><p><?php echo $book['title']?></p></div>
+                            <div class="book_graphic"><p><?php echo $book->get_title()?></p></div>
                             <div class="public_info">
-                                <h3><?php echo $book['title']?></h3>
-                                <p><?php echo $book['description']?></p>
+                                <h3><?php echo $book->get_title()?></h3>
+                                <p><?php echo $book->get_description()?></p>
                             </div>
                             <div class="personal_info">
                                 <?php if (!is_null($rating)) { ?>
@@ -17,7 +17,7 @@
                                 <?php } ?>
                             </div>
                         </div>
-                        <a href="../private/index.php?action=personal_library&user_id=<?php echo $user_id?>&add=<?php echo $book['id']?>"><img class="add" src="../public/img/add.png" alt="Add"></a>
+                        <a href="../private/index.php?action=personal_library&user_id=<?php echo $user_id?>&add=<?php echo $book->get_id()?>"><img class="add" src="../public/img/add.png" alt="Add"></a>
                     </li>
                 <?php endforeach;?>
             </ul>

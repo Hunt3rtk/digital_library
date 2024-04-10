@@ -25,9 +25,13 @@ if(is_post_request()) {
 
         $user = find_user_by_username($username);
         if($user) {
-        // password matches
-        log_in_user($user);
-        redirect_to(url_for('/private/index.php?user_id='.$user['id']));
+          // password match
+          if (validate_password($user->get_id(), $password)) {
+            log_in_user($user);
+            redirect_to(url_for('/private/index.php?user_id='.$user->id));
+          } else {
+            $errors[] = $login_failure_msg;
+          }
         }
     }
 }

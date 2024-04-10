@@ -8,9 +8,9 @@
     <?php foreach($books as $book):?>
     <li>
 
-        <h3><?php echo $book['title']?></h3>
-        <div><p><?php echo $book['title']?></p></div>
-        <p><?php echo $book['description']?></p>
+        <h3><?php echo $book->get_title()?></h3>
+        <div><p><?php echo $book->get_title()?></p></div>
+        <p><?php echo $book->get_description()?></p>
     </li>
     <?php endforeach;?>
 </ul>

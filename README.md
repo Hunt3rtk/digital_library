@@ -17,13 +17,13 @@ Once this is done typing "localhost/digital_library" into the browser should pri
 
 There is only options to log in meaning that you can't create a profile (out of scope for the project)
 
-There are two profiles 'hunter' and 'hunter2' in order to log in the correct username has to be inputted but currently any password will work unless you leave the password section empty.
+There are two profiles 'hunter' and 'hunter2' in order to log in the correct username has to be inputted as well as the password. (sesame in both cases)
 
 Once logged in you can look through the three pages and add or delete from your library.
 
-the edit function in the library page does nothing and is currently just there to show how it would work (this is a quick add).
+the edit function in the library page allows for editing the your comment on the book as well as leaving a rating ot of 5.
 
-The book blocks also display a rating. In the library page this is your rating and in the discover page it is an average of all users rating.
+The book div blocks, also display a rating. In the library page this is your rating and in the discover page it is an average of all users rating.
 
 to log out simply click the log out button at the top right of any three of the pages.
 

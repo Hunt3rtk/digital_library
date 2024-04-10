@@ -5,8 +5,8 @@
         </div>
     </div>
     <div class="profile_info_col1">
-        <h1><?php echo $user['username']?></h1>
-        <p><?php echo $user['email']?></p><br>
+        <h1><?php echo $user->get_username()?></h1>
+        <p><?php echo $user->get_email()?></p><br>
     </div>
     <div class="profile_info_col2">
     </div>

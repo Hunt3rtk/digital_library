@@ -430,6 +430,49 @@ main form {
     overflow: auto;
 }
 
+
+.search_container input {
+    padding: 10px;
+    font-size: 30px;
+    width: 80%;
+    float: left;
+    padding: 10px;
+    border: 1px solid grey;
+    background: #f1f1f1;
+}
+
+.search_container button {
+    float: left;
+    font-size: 30px;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+
+  .search_container img {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .search_container button:hover {
+    background: #0b7dda;
+  }
+  
+  .search_container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .search_container label {
+    color: var(--van-dyke);
+  }
+
 .errors {
     text-align: left;
     float: left;

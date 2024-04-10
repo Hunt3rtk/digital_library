@@ -11,7 +11,8 @@
   define("PRIVATE_PATH", dirname(__FILE__));
   define("PROJECT_PATH", dirname(PRIVATE_PATH));
   define("PUBLIC_PATH", PROJECT_PATH . '/public');
-  define("VIEWER_PATH", PRIVATE_PATH . '/view');
+  define("VIEW_PATH", PRIVATE_PATH . '/view');
+  define("MODEL_PATH", PRIVATE_PATH . '/model');
 
   // Assign the root URL to a PHP constant
   // * Do not need to include the domain
@@ -21,15 +22,18 @@
   // $doc_root = substr($_SERVER['SCRIPT_NAME'], 0, $public_end);
   define("WWW_ROOT", '/digital_library');
 
-  require_once('functions.php');
-  require_once('model/database.php');
-  require_once('model/query_functions.php');
-  require_once('validation_functions.php');
-  require_once('auth_functions.php');
+  require_once(MODEL_PATH . '/functions.php');
+  require_once(MODEL_PATH . '/database.php');
+  require_once(MODEL_PATH . '/query_functions.php');
+  require_once(MODEL_PATH . '/validation_functions.php');
+  require_once(MODEL_PATH . '/auth_functions.php');
+  require_once(MODEL_PATH . '/objects.php');
 
   $db = db_connect();
   $errors = [];
   $book_id = 0;
+  $orderby = "id";
+  $order = "DESC";
 
 ?>
 

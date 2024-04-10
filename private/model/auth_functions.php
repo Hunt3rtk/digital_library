@@ -6,9 +6,9 @@
   function log_in_user($user) {
   // Renerating the ID protects the user from session fixation.
     session_regenerate_id();
-    $_SESSION['user_id'] = $user['id'];
+    $_SESSION['user_id'] = $user->get_id();
     $_SESSION['last_login'] = time();
-    $_SESSION['username'] = $user['username'];
+    $_SESSION['username'] = $user->get_username();
     return true;
   }
 
